@@ -139,6 +139,3 @@ class IOIterator(object):
 
     def next(self):
         return self.__next__()
-
-    def _filter(self, object):
-        return not self._filter_func or self.filter_func(object)

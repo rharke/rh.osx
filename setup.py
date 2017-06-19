@@ -21,12 +21,27 @@
 
 from setuptools import setup
 
+def readme():
+    with open('README.rst') as f:
+        return f.read()
+
 setup(name='rh.osx',
-      version='0.1',
+      version='0.1.1',
       description='Python bindings to access native macOS APIs',
+      long_description=readme(),
+      classifiers=[
+          'Development Status :: 3 - Alpha',
+          'Environment :: MacOS X',
+          'License :: OSI Approved :: MIT License',
+          'Natural Language :: English',
+          'Operating System :: MacOS :: MacOS X',
+          'Programming Language :: Python',
+          'Topic :: Software Development :: Libraries :: Python Modules'
+      ],
       author='Ranger Harke',
       author_email='ranger.harke@gmail.com',
       url='http://github.com/rharke/rh.osx',
       license='MIT',
+      namespace_packages=['rh'],
       packages=['rh.osx'],
       zip_safe=False)
